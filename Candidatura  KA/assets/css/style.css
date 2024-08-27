@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* Regras globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcfcfc;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: auto; /* Ajuste a altura para se ajustar ao conteúdo */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.212);
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+}
+
+/* Estilo do cabeçalho do formulário */
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Estilo da imagem no cabeçalho */
+.title img {
+    width: 100%; /* Ajusta para a largura do contêiner */
+    max-width: 250px; /* Tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-top: 35px;
+}
+
+/* Estilo do formulário */
+.form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Linha horizontal após o título do formulário */
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #700d0d;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Estilo dos grupos de inputs */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+/* Estilo das caixas de input */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    width: 100%;
+    max-width: 45%;
+}
+
+/* Ajuste para inputs em telas menores */
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Estilo adicional para o foco e hover dos inputs */
+.input-box input:hover {
+    background-color: #afaaaa75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #ffffff;
+}
+
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+/* Estilo do botão de continuar */
+.continue-button button {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 1.5rem;
+    border: none;
+    color: #ffff;
+    background-color: #a20606;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.continue-button button:hover {
+    background-color: black;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+    .form-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-box {
+        max-width: 100%;
+    }
+
+    .form-header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .form {
+        width: 100%;
+    }
+
+    .continue-button button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form {
+        padding: 0.5rem;
+    }
+    
+    .input-box input {
+        font-size: 0.7rem;
+    }
+    
+    .continue-button button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .title img {
+        width: 114%;
+        max-width: 273px;
+        height: auto;
+        margin-top: 10rem;
+    }
+}

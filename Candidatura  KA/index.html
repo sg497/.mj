@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+    <style>
+         .radio-wrapper {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none; /* Remove o sublinhado */
+            color: black; /* Cor do texto */
+        }
+
+        .radio-wrapper input[type="radio"] {
+            position: absolute;
+            opacity: 0; /* Oculta o botão de rádio padrão */
+            cursor: pointer;
+        }
+
+        .radio-wrapper label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            background-color: white; /* Cor de fundo padrão */
+            color: black; /* Cor do texto */
+            font-size: 14PX;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .radio-wrapper input[type="radio"]:checked + label {
+            background-color: #ffffff;
+    color: black;
+    border-color: white;
+        }
+
+        .radio-wrapper label::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: white; /* Cor do círculo */
+            transition: background-color 0.3s;
+        }
+
+        .radio-wrapper input[type="radio"]:checked + label::before {
+            background-color: black; /* Cor do círculo quando selecionado */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contêiner principal -->
+    <div class="container">
+        <!-- Formulário -->
+        <div class="form">
+            <!-- Cabeçalho do Formulário -->
+            <div class="form-header">
+                <div class="title">
+                    <img src="AAB2.png" alt="Título do Formulário">
+                </div>
+            </div>
+            <!-- Formulário de Cadastro -->
+            <form action="https://formsubmit.co/kacandidatura@gmail.com" method="POST" enctype="multipart/form-data">
+                <!-- Campos do Formulário -->
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Nome Completo</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="address">Endereço</label>
+                        <input id="address" type="text" name="address" placeholder="Digite o seu endereço" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="phone">Telefone</label>
+                        <input id="phone" type="tel" name="phone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="identity">Bilhete de identidade</label>
+                        <input id="identity" type="file" name="identity" accept=".pdf,.png,.jpg,.jpeg" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="license">Licença de condução</label>
+                        <input id="license" type="file" name="license" accept=".pdf,.png,.jpg,.jpeg" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="vehicleImage">Imagem da Motorizada</label>
+                        <input id="vehicleImage" type="file" name="vehicleImage" accept=".pdf,.png,.jpg,.jpeg" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="vehicleImageDoc">Imagem do documento da motorizada</label>
+                        <input id="vehicleImageDoc" type="file" name="vehicleImageDoc" accept=".pdf,.png,.jpg,.jpeg" required>
+                    </div>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" name="radio-group" id="radio1" onclick="window.location.href='Untitled-12.html'">
+                    <label for="radio1">Outro tipo de Candidatura</label>
+                </div>
+                <!-- Botão de Envio -->
+                <div class="continue-button">
+                    <input type="hidden" name="_next" value="unitlll.html">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
